@@ -19,17 +19,17 @@ router.post("/",
         if(result.errors.length == 0){
             return next();            
         }
-        return res.redirect("/login?input=invalid");
+        return res.redirect("/login?error=invalid_input");
     },
     getUserByNameMW(),
     (req, res, next) => {
         if(res.locals.user != undefined){
-            return res.redirect("/login?username=taken");
+            return res.redirect("/login?error=username_taken");
         }
         return next();
     },
     saveUserMW(),
-    redirectMW("/login?result=success"),
+    redirectMW("/login?result=successful_reg"),
 );
 
 module.exports = router;

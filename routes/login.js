@@ -15,13 +15,13 @@ router.post("/",
         if(results.isEmpty()){
             return next();
         }else{
-            return res.redirect("/login?input=invalid");
+            return res.redirect("/login?error=invalid_input");
         }
     },
     getUserByName(),
     (req, res, next) => {
         if(res.locals.user == undefined){
-           return res.redirect("/login?username=incorrect")
+           return res.redirect("/login?error=invalid_username");
         }
         return next();
     },
