@@ -1,0 +1,31 @@
+<%- include("../commons/header") -%>
+
+<!--Navbar -->
+<%- include("../commons/navbar") -%>
+
+<div class="container">
+    <table class="table table-bordered table-striped mt-4">
+        <thead class="">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Comments</th>
+                </tr>
+        </thead>
+        <tbody>
+    
+        <% popular_movies.forEach((item, i) => { %>
+            <tr>
+                <th scope="row"><%= i+1 %></th>
+                <td><a href="/movie/details/<%= item._id.movie_imdb_id %>"> <%= item._id.movie_name %> </a></td>
+                <td><%= item.count %></td>
+            </tr>
+
+        <% }); %>
+
+        </tbody> 
+    </table>      
+</div>
+
+
+<%- include("../commons/footer") -%>

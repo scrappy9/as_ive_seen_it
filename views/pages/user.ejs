@@ -1,0 +1,20 @@
+<%- include("../commons/header") -%>
+
+<!--Navbar -->
+<%- include("../commons/navbar") -%>
+
+<div class="container">
+
+    <%- include("../commons/user_info") -%>
+
+    <% comment_list.forEach((_comment) => { %>
+        <%- include("../commons/comment.ejs", {comment: {
+                header: _comment.movie_name,
+                header_href: `/movie/details/${_comment.movie_imdb_id}`,
+                content: _comment.content,
+                comment_id: _comment._id,
+        }}) -%>
+    <% }); %>
+</div>
+
+<%- include("../commons/footer") -%>

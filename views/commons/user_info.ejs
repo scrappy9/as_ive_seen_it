@@ -1,0 +1,23 @@
+<!-- user details -->
+<div class="row">
+    <!-- left side margin -->
+    <div class="col-lg-1 col-0"></div>
+  
+    <div class="col-lg-10 col-12">
+        <table class="table mt-4 table-bordered">
+            <tbody>
+                <tr>                                
+                    <td colspan="2"><%= user.username %></td>
+                </tr> 
+                <tr>
+                    <td>Member since:</td>
+                    <td> <%= (new Date(user.reg_date)).toISOString().split("T")[0]; %> </td>                           
+                </tr>
+                               
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- right side margin -->
+    <div class="col-lg-1 col-0"></div>
+</div>

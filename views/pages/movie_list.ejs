@@ -1,0 +1,13 @@
+<%- include("../commons/header") -%>
+
+<!--Navbar -->
+<%- include("../commons/navbar") -%>
+
+<div class="container">
+    <% movie_list.forEach((_movie) => { %>
+            <%- include("../commons/movie_basic.ejs", {movie: _movie}) -%>
+    <% }); %>           
+</div>
+
+
+<%- include("../commons/footer") -%>

@@ -1,0 +1,30 @@
+<!-- comment -->
+<div class="row">
+
+    <!-- left side margin -->
+    <div class="col-lg-1 col-0"></div>
+
+    <div class="col-lg-10 col-12">
+
+        <table class="table table-bordered">
+            <tbody>
+                <tr>                                
+                    <td style="width:30px;white-space: nowrap" class="text-secondary"><i class="fas fa-question"></i></td>
+                    <td><a href="<%= comment.header_href %>"><%= comment.header %></td>
+                    
+                    <td style="width:30px;white-space: nowrap">
+                        <a href="/comment/edit/<%= comment.comment_id %>" class=""> <i class="fas fa-edit text-primary"></i> </a>
+                        <a href="/comment/delete/<%= comment.comment_id %>" class=""> <i class="fas fa-trash-alt text-danger"></i> </a>                                </td>
+                </tr> 
+                <tr>
+                    <td class="text-justify" colspan="3">
+                        <%= comment.content %>
+                    </td>                                
+              </tr>                            
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- right side margin -->
+    <div class="col-lg-1 col-0"></div>
+</div>

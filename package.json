@@ -1,0 +1,27 @@
+{
+  "name": "as_ive_seen_it",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "mocha ./tests/"
+  },
+  "author": "scrappy9",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "connect-mongo": "^3.2.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.4.0",
+    "mongoose": "^5.9.9"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2",
+    "nodemon": "^2.0.3"
+  }
+}
