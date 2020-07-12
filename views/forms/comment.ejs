@@ -5,7 +5,7 @@
     <div class="col-lg-1 col-0"></div>
   
     <div class="col-lg-10 col-12">
-        <form class="my-5" method="POST" action="<%if(locals.comment){%><%= locals.comment.action %><%}else{%>/comment/new/<%= movie.imdb_id %><%}%>">
+        <form class="my-4" method="POST" action="<%if(locals.comment){%><%= locals.comment.action %><%}else{%>/comment/new/<%= movie.imdb_id %><%}%>">
             <div class="form-group">
                 <label for="content">Comment</label>
                 <textarea class="form-control" name="content" id="content" rows="3"><% if(locals.comment){ %> <%= locals.comment.content %> <% } %></textarea>

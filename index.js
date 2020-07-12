@@ -4,7 +4,7 @@ const mongo_store = require('connect-mongo')(session);
 const ejs = require("ejs");
 
 const app = express();
-const port = process.env.PORT || 80; //TODO: change port to 3000 because reasons
+const port = process.env.PORT || 80;
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
