@@ -9,28 +9,12 @@
     <div class="form-group">
         <label for="sing_in_username">Username</label>
         <input type="text" class="form-control" name="username" id="sing_in_username">
-        
-        <% if(locals.query && locals.query.username == "taken") { %> 
-            <small id="username_help" class="form-text text-danger">Username already taken</small>
-        <% } %> 
-
-        <!--
-        <small id="username_help" class="form-text text-danger">Invalid username</small>
-        -->
     </div>
     
     <div class="form-group">
         <label for="sign_in_password">Password</label>
         <input type="password" class="form-control" name="password" id="sign_in_password">
         <small id="password_help" class="form-text text-muted">Please don't reuse your passwords</small>
-        
-        <% if(locals.query && locals.query.password == "invalid") { %> 
-            <small id="password_help2" class="form-text text-danger">Invalid input</small>
-        <% } %> 
-        
-        <!--   
-        <small id="password_help" class="form-text text-danger">Invalid password</small>
-        -->
     </div>
     
     <button type="submit" class="btn btn-primary">Sign up</button>
