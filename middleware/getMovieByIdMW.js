@@ -12,12 +12,13 @@ module.exports = function(){
             if(response.data.Response === "False"){
                 return res.send("Movie not found!");
             }
-    
+
             res.locals.movie = {
                 title: response.data.Title,
                 plot: response.data.Plot,
                 poster: response.data.Poster,
                 imdb_id: response.data.imdbID,
+                all_data: response.data,
             };
                 
             return next();

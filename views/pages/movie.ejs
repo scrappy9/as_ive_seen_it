@@ -13,11 +13,11 @@
                 header_href: `/user/${_comment._author._id}`,
                 content: _comment.content,
                 comment_id: _comment._id,
+                hide_buttons: (locals.user.username == _comment._author.username) ? false : true,
         }}) -%>
     <% }); %>
     
     <%#- include("../commons/comment") -%>
 </div>
-
 
 <%- include("../commons/footer") -%>
