@@ -4,20 +4,11 @@
     <div class="form-group">
         <label for="sign_in_username">Username</label>
         <input type="text" class="form-control" name="username" id="sign_in_username">
-        
-        <% if(locals.query && locals.query.username == "incorrect") { %> 
-            <small id="username_help" class="form-text text-danger">Non existent username</small>
-        <% } %> 
-
     </div>
     
     <div class="form-group">
         <label for="sign_in_password">Password</label>
         <input type="password" class="form-control" name = "password" id="sign_in_password">
-        
-        <% if(locals.query && locals.query.password == "incorrect") { %> 
-            <small id="password_help" class="form-text text-danger">Incorrect password</small>
-        <% } %> 
     </div>
 
     <!--

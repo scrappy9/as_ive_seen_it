@@ -2,22 +2,26 @@
 
 <!--Navbar -->
 <%- include("../commons/navbar") -%>
+
 <!--
 <h1 class="text-center mt-5">Welcome</h1>
 -->
 
 <div class="container">
+
+    <%- include("../alerts/alert_rows.ejs") -%>
+
     <div class="row">
         <!-- left margin -->
         <div class="col-lg-1 col-0"></div>
 
         <!-- log in - left side / top -->
-        <div class="col-lg-5 col-12 mt-5">
+        <div class="col-lg-5 col-12 mt-4">
             <%- include("../forms/signin.ejs") -%>
         </div>
         
         <!-- sign up - right side / -->
-        <div class="col-lg-5 col-12 mt-5">
+        <div class="col-lg-5 col-12 mt-4">
             <%- include("../forms/register.ejs") -%>
         </div>
 

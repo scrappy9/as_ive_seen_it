@@ -1,0 +1,45 @@
+<div class="row">
+    <!-- left margin -->
+    <div class="col-lg-2 col-0"></div>
+    
+    <div class="col-lg-8 col-12">
+
+        <% if(locals.query && locals.query.error) { %> 
+            <div class="alert alert-danger mt-3" role="alert">
+
+                <% switch (locals.query.error) {
+                    case "invalid_input": %>
+                        Invalid input(s). Please fill out the form  properly
+                        <% break;
+                    
+                    case "invalid_username" : %>
+                        Username does not exist
+                        <% break;
+                    
+                    case "incorrect_password" : %>
+                        Incorrect password
+                        <% break;
+
+                    case "username_taken" : %>
+                        Username is not available
+                        <% break;
+                    
+                    case "db_error" : %>
+                        Failed to establish a database connection.
+                        <% break;                    
+                    } %>
+            </div>
+        <% } %>
+        
+        <% if(locals.query && locals.query.result) { %> 
+            <div class="alert alert-success mt-3" role="alert">
+                <% if(locals.query.result == "successful_reg") { %> 
+                    Your account has been created. Now you can log in.
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- right margin -->
+    <div class="col-lg-2 col-0"></div>
+</div>
