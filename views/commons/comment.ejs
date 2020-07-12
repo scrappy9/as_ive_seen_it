@@ -12,9 +12,14 @@
                     <td style="width:30px;white-space: nowrap" class="text-secondary"><i class="fas fa-question"></i></td>
                     <td><a href="<%= comment.header_href %>"><%= comment.header %></td>
                     
-                    <td style="width:30px;white-space: nowrap">
-                        <a href="/comment/edit/<%= comment.comment_id %>" class=""> <i class="fas fa-edit text-primary"></i> </a>
-                        <a href="/comment/delete/<%= comment.comment_id %>" class=""> <i class="fas fa-trash-alt text-danger"></i> </a>                                </td>
+                    <% if(!comment.hide_buttons) { %>
+                        <!-- edit, del buttons -->
+                        <td style="width:30px;white-space: nowrap">
+                            <a href="/comment/edit/<%= comment.comment_id %>" class=""> <i class="fas fa-edit text-primary"></i> </a>
+                            <a href="/comment/delete/<%= comment.comment_id %>" class=""> <i class="fas fa-trash-alt text-danger"></i> </a>
+                        </td>
+                    <% } %>
+
                 </tr> 
                 <tr>
                     <td class="text-justify" colspan="3">
