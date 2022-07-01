@@ -35,13 +35,18 @@ app.get("/logout", (req, res, next) => {
 });
 
 const authMW = require("./middleware/authMW");
+const redirectMW = require("./middleware/redirectMW");
+
 app.get("/",
     authMW(),
-    (req, res, next) => {
-        res.render("./pages/main.ejs");
-        //return res.redirect(`/user/${res.locals.user._id}`)
-        //return res.json(res.locals.user);
-});
+    redirectMW("/movie/popular")
+    // (req, res, next) => {
+    //     //res.render("./pages/main.ejs");
+    //     return
+    //     //return res.redirect(`/user/${res.locals.user._id}`)
+    //     //return res.json(res.locals.user);
+    // }
+);
 
 app.use((err, req, res, next) => {
     res.end('Problem...');

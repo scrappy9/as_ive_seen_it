@@ -1,9 +1,10 @@
 const axios = require("axios");
+const api_key = require("../config/omdb");
 
 module.exports = function(){
     return function (req, res, next) {
 
-        let url = "http://www.omdbapi.com/?apikey=db47dc19&plot=full&i=";
+        let url = `https://www.omdbapi.com/?apikey=${api_key}&plot=full&i=`;
     
         url += req.params.imdb_id;
     
