@@ -9,8 +9,7 @@ module.exports = function (){
             return res.redirect(`/movie/details/${req.params.imdb_id}`);
         }
 
-
-        let url = `http://www.omdbapi.com/?apikey=db47dc19&i=${req.params.imdb_id}`;
+        let url = `https://www.omdbapi.com/?apikey=${api_key}&i=${req.params.imdb_id}`;
         axios.get(url)
         .then((response) => {
             if(response.data.Response === "False"){

@@ -3,7 +3,7 @@ const axios = require("axios");
 module.exports = function(){
     return function (req, res, next) {
 
-        let url = "http://www.omdbapi.com/?apikey=db47dc19&s=";
+        let url = `https://www.omdbapi.com/?apikey=${api_key}&s=`;
     
         var search_tearm = req.query.q.normalize("NFD")
         .replace(/[^a-zA-Z0-9 ]/g, "")      //keep alfanumeric ch.
